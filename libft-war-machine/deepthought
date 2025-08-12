@@ -1,0 +1,930 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+c1r4s8.42amman.com
+Linux 6.8.0-65-generic x86_64
+$> date
+Tue Aug 12 06:24:59 PM +03 2025
+$> gcc --version
+gcc (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+$> clang --version
+Ubuntu clang version 12.0.1-19ubuntu3
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+
+= libft.h=======================================================================
+$> norminette libft.h | grep -E '(Error|Warning)'
+
+= Compiling libft ==============================================================
+$> make re
+rm -f ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_strncmp.o
+rm -f libft.a
+cc -Wall -Wextra -Werror   -c -o ft_atoi.o ft_atoi.c
+cc -Wall -Wextra -Werror   -c -o ft_bzero.o ft_bzero.c
+cc -Wall -Wextra -Werror   -c -o ft_calloc.o ft_calloc.c
+cc -Wall -Wextra -Werror   -c -o ft_isalnum.o ft_isalnum.c
+cc -Wall -Wextra -Werror   -c -o ft_isalpha.o ft_isalpha.c
+cc -Wall -Wextra -Werror   -c -o ft_isascii.o ft_isascii.c
+cc -Wall -Wextra -Werror   -c -o ft_isdigit.o ft_isdigit.c
+cc -Wall -Wextra -Werror   -c -o ft_isprint.o ft_isprint.c
+cc -Wall -Wextra -Werror   -c -o ft_itoa.o ft_itoa.c
+cc -Wall -Wextra -Werror   -c -o ft_memchr.o ft_memchr.c
+cc -Wall -Wextra -Werror   -c -o ft_memcmp.o ft_memcmp.c
+cc -Wall -Wextra -Werror   -c -o ft_memcpy.o ft_memcpy.c
+cc -Wall -Wextra -Werror   -c -o ft_memmove.o ft_memmove.c
+cc -Wall -Wextra -Werror   -c -o ft_memset.o ft_memset.c
+cc -Wall -Wextra -Werror   -c -o ft_putchar_fd.o ft_putchar_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_putendl_fd.o ft_putendl_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_putnbr_fd.o ft_putnbr_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_putstr_fd.o ft_putstr_fd.c
+cc -Wall -Wextra -Werror   -c -o ft_strchr.o ft_strchr.c
+cc -Wall -Wextra -Werror   -c -o ft_strdup.o ft_strdup.c
+cc -Wall -Wextra -Werror   -c -o ft_striteri.o ft_striteri.c
+cc -Wall -Wextra -Werror   -c -o ft_strjoin.o ft_strjoin.c
+cc -Wall -Wextra -Werror   -c -o ft_strlcat.o ft_strlcat.c
+cc -Wall -Wextra -Werror   -c -o ft_strlcpy.o ft_strlcpy.c
+cc -Wall -Wextra -Werror   -c -o ft_strlen.o ft_strlen.c
+cc -Wall -Wextra -Werror   -c -o ft_strmapi.o ft_strmapi.c
+cc -Wall -Wextra -Werror   -c -o ft_strrchr.o ft_strrchr.c
+cc -Wall -Wextra -Werror   -c -o ft_strtrim.o ft_strtrim.c
+cc -Wall -Wextra -Werror   -c -o ft_substr.o ft_substr.c
+cc -Wall -Wextra -Werror   -c -o ft_tolower.o ft_tolower.c
+cc -Wall -Wextra -Werror   -c -o ft_toupper.o ft_toupper.c
+cc -Wall -Wextra -Werror   -c -o ft_strncmp.o ft_strncmp.c
+ar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_strncmp.o
+
+$> make bonus
+make: *** No rule to make target 'bonus'.  Stop.
+
+$> ls -la libft.a
+-rw-r--r-- 1 talshoub 2025_amman 43884 Aug 12 18:25 /home/talshoub/core/libft-war-machine/dirlibft/libft.a
+
+= Part1_functions ==============================================================
+
+= ft_memset.c ==================================================================
+$> norminette ft_memset.c | grep -E '(Error|Warning)'
+ft_memset.c: Error!
+Error: NO_SPC_BFR_OPR       (line:  15, col:  30):	[94mextra space before operator[0m
+Error: SPACE_AFTER_KW       (line:  19, col:  19):	Missing space after keyword
+Error: SPACE_AFTER_KW       (line:  20, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  20, col:  10):	[94mMissing space before parenthesis (brace/bracket)[0m
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memset.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memset/user_output_test01	2025-08-12 18:25:00.549738505 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memset/test01.output	2025-08-10 18:12:36.316037138 +0300$
+@@ -1,2 +1 @@$
+-mem's adress was not returned$
+ cccccjjjjjjjjjj$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memset/user_output_test02	2025-08-12 18:25:00.610738614 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memset/test02.output	2025-08-10 18:12:36.316037138 +0300$
+@@ -1,2 +1 @@$
+-mem's adress was not returned$
+ ccccccccccccccj$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memset/user_output_test03	2025-08-12 18:25:00.670738721 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memset/test03.output	2025-08-10 18:12:36.316037138 +0300$
+@@ -1,4 +1,3 @@$
+-mem's adress was not returned$
+ $
+ $
+ $
+
+Diff KO :(
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+Binary files /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memset/user_output_test04 and /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memset/test04.output differ$
+
+Diff KO :(
+
+= ft_bzero.c ===================================================================
+$> norminette ft_bzero.c | grep -E '(Error|Warning)'
+ft_bzero.c: Error!
+Error: NO_SPC_BFR_OPR       (line:  15, col:  26):	[94mextra space before operator[0m
+Error: SPC_AFTER_OPERATOR   (line:  15, col:  26):	[94mmissing space after operator[0m
+Error: SPACE_EMPTY_LINE     (line:  18, col:   1):	Space on empty line
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_bzero.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+
+= ft_calloc.c ==================================================================
+$> norminette ft_calloc.c | grep -E '(Error|Warning)'
+ft_calloc.c: Error!
+Error: SPACE_EMPTY_LINE     (line:  15, col:   1):	Space on empty line
+Error: NL_AFTER_PREPROC     (line:  17, col:   1):	Preprocessor statement must be followed by a newline
+Error: SPACE_BEFORE_FUNC    (line:  17, col:   5):	[94mspace before function name[0m
+Error: MISALIGNED_VAR_DECL  (line:  20, col:  13):	Misaligned variable declaration
+Error: SPC_AFTER_OPERATOR   (line:  23, col:  22):	[94mmissing space after operator[0m
+Error: NO_SPC_BFR_PAR       (line:  23, col:  28):	[94mExtra space before parenthesis (brace/bracket)[0m
+Error: SPACE_AFTER_KW       (line:  24, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  24, col:   7):	[94mMissing space before parenthesis (brace/bracket)[0m
+Error: SPC_AFTER_OPERATOR   (line:  26, col:  16):	[94mmissing space after operator[0m
+Error: SPC_AFTER_OPERATOR   (line:  26, col:  18):	[94mmissing space after operator[0m
+Error: RETURN_PARENTHESIS   (line:  27, col:  12):	Return value must be in parenthesis
+Error: INCLUDE_START_FILE   (line:  29, col:   1):	Include must be at the start of file
+Error: NEWLINE_PRECEDES_FUNC (line:  30, col:   1):	Functions must be separated by a newline
+Error: NL_AFTER_PREPROC     (line:  30, col:   1):	Preprocessor statement must be followed by a newline
+Error: EMPTY_LINE_FUNCTION  (line:  32, col:   1):	Empty line in function
+Error: VAR_DECL_START_FUNC  (line:  33, col:   1):	Variable declaration not at start of function
+Error: SPACE_REPLACE_TAB    (line:  33, col:   9):	Found space when expecting tab
+Error: DECL_ASSIGN_LINE     (line:  33, col:  13):	Declaration and assignation on a single line
+Error: SPC_AFTER_OPERATOR   (line:  33, col:  26):	[94mmissing space after operator[0m
+Error: FORBIDDEN_CS         (line:  34, col:   5):	Forbidden control structure
+Error: NO_SPC_BFR_OPR       (line:  34, col:  20):	[94mextra space before operator[0m
+Error: NO_SPC_BFR_OPR       (line:  34, col:  28):	[94mextra space before operator[0m
+Error: TOO_FEW_TAB          (line:  36, col:   1):	Missing tabs for indent level
+Error: SPC_AFTER_OPERATOR   (line:  36, col:  16):	[94mmissing space after operator[0m
+Error: SPC_BFR_PAR          (line:  36, col:  17):	[94mMissing space before parenthesis (brace/bracket)[0m
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_calloc.c main.c libft.a -o user_exe
+
+/usr/bin/ld: /tmp/main-1081b5.o: in function `main':
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_calloc/main.c:18: multiple definition of `main'; /tmp/ft_calloc-dbec05.o:/home/talshoub/core/libft-war-machine/dirlibft/ft_calloc.c:31: first defined here
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+= ft_memcpy.c ==================================================================
+$> norminette ft_memcpy.c | grep -E '(Error|Warning)'
+ft_memcpy.c: Error!
+Error: EMPTY_LINE_FUNCTION  (line:  31, col:   1):	Empty line in function
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memcpy.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+
+= ft_memmove.c =================================================================
+$> norminette ft_memmove.c | grep -E '(Error|Warning)'
+ft_memmove.c: Error!
+Error: MISALIGNED_VAR_DECL  (line:  19, col:  17):	Misaligned variable declaration
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memmove.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memmove/user_output_test03	2025-08-12 18:25:01.708740571 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memmove/test03.output	2025-08-10 18:12:36.316037138 +0300$
+@@ -1 +1 @@$
+-llllllllum dolor sit a$
+\ No newline at end of file$
++lorem ipum dolor sit a$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+
+= ft_memchr.c ==================================================================
+$> norminette ft_memchr.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memchr.c main.c libft.a -o user_exe
+
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:39:9: error: implicit declaration of function 'ft_memchr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                str = ft_memchr("bonjour", 'b', 4);
+                      ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:39:7: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                str = ft_memchr("bonjour", 'b', 4);
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:47:9: error: implicit declaration of function 'ft_memchr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                str = ft_memchr("bonjour", 'o', 7);
+                      ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:47:7: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                str = ft_memchr("bonjour", 'o', 7);
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:55:9: error: implicit declaration of function 'ft_memchr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                str = ft_memchr("bonjourno", 'n', 2);
+                      ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:55:7: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                str = ft_memchr("bonjourno", 'n', 2);
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:63:9: error: implicit declaration of function 'ft_memchr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                str = ft_memchr("bonjour", 'j', 6);
+                      ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:63:7: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                str = ft_memchr("bonjour", 'j', 6);
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:71:9: error: implicit declaration of function 'ft_memchr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                str = ft_memchr("bonjour", 's', 7);
+                      ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:71:7: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                str = ft_memchr("bonjour", 's', 7);
+                    ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:81:24: error: implicit declaration of function 'ft_memchr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                printf("%s", (char *)ft_memchr(tab, -1, 7));
+                                     ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memchr/main.c:81:16: error: cast to 'char *' from smaller integer type 'int' [-Werror,-Wint-to-pointer-cast]
+                printf("%s", (char *)ft_memchr(tab, -1, 7));
+                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+12 errors generated.
+
+= ft_memcmp.c ==================================================================
+$> norminette ft_memcmp.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memcmp.c main.c libft.a -o user_exe
+
+/usr/bin/ld: /tmp/main-9cd21c.o: in function `main':
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memcmp/main.c:36: undefined reference to `ft_memcmp'
+/usr/bin/ld: /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memcmp/main.c:38: undefined reference to `ft_memcmp'
+/usr/bin/ld: /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memcmp/main.c:40: undefined reference to `ft_memcmp'
+/usr/bin/ld: /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memcmp/main.c:42: undefined reference to `ft_memcmp'
+/usr/bin/ld: /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memcmp/main.c:44: undefined reference to `ft_memcmp'
+/usr/bin/ld: /tmp/main-9cd21c.o:/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_memcmp/main.c:46: more undefined references to `ft_memcmp' follow
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+= ft_strlen.c ==================================================================
+$> norminette ft_strlen.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlen.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+
+= ft_strdup.c ==================================================================
+$> norminette ft_strdup.c | grep -E '(Error|Warning)'
+ft_strdup.c: Error!
+Error: MISALIGNED_VAR_DECL  (line:  18, col:   9):	Misaligned variable declaration
+Error: MISALIGNED_VAR_DECL  (line:  19, col:   9):	Misaligned variable declaration
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strdup.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strdup/user_output_test01	2025-08-12 18:25:02.409741821 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strdup/test01.output	2025-08-10 18:12:36.319037193 +0300$
+@@ -0,0 +1 @@$
++lorem ipsum dolor sit amet$
+\ No newline at end of file$
+
+Diff KO :(
+
+= ft_strlcat.c =================================================================
+$> norminette ft_strlcat.c | grep -E '(Error|Warning)'
+ft_strlcat.c: Error!
+Error: TOO_FEW_TAB          (line:  28, col:   1):	Missing tabs for indent level
+Error: SPC_AFTER_PAR        (line:  36, col:  11):	[94mMissing space after parenthesis (brace/bracket)[0m
+Error: SPC_AFTER_OPERATOR   (line:  36, col:  12):	[94mmissing space after operator[0m
+Error: SPC_BFR_OPERATOR     (line:  36, col:  12):	[94mmissing space before operator[0m
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcat.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+Binary files /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcat/user_output_test04 and /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcat/test04.output differ$
+
+Diff KO :(
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcat/user_output_test07	2025-08-12 18:25:02.962742807 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcat/test07.output	2025-08-10 18:12:36.319037193 +0300$
+@@ -0,0 +1,2 @@$
++31$
++rrrrrrrrrrrrrrr$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+Binary files /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcat/user_output_test08 and /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcat/test08.output differ$
+
+Diff KO :(
+= Test 9 ===================================================
+$> ./user_exe 09
+$> diff -U 3 user_output_test09 test09.output
+Binary files /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcat/user_output_test09 and /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcat/test09.output differ$
+
+Diff KO :(
+
+= ft_strlcpy.c =================================================================
+$> norminette ft_strlcpy.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+Binary files /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/user_output_test01 and /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/test01.output differ$
+
+Diff KO :(
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+Binary files /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/user_output_test02 and /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/test02.output differ$
+
+Diff KO :(
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+Binary files /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/user_output_test03 and /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/test03.output differ$
+
+Diff KO :(
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+Binary files /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/user_output_test04 and /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/test04.output differ$
+
+Diff KO :(
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+Binary files /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/user_output_test05 and /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strlcpy/test05.output differ$
+
+Diff KO :(
+
+= ft_strchr.c ==================================================================
+$> norminette ft_strchr.c | grep -E '(Error|Warning)'
+ft_strchr.c: Error!
+Error: SPACE_EMPTY_LINE     (line:  18, col:   1):	Space on empty line
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strchr.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strchr/user_output_test04	2025-08-12 18:25:03.810744319 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strchr/test04.output	2025-08-10 18:12:36.319037193 +0300$
+@@ -0,0 +1 @@$
++NULL$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+
+= ft_strrchr.c =================================================================
+$> norminette ft_strrchr.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strrchr.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/user_output_test01	2025-08-12 18:25:04.013744681 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/test01.output	2025-08-10 18:12:36.323037266 +0300$
+@@ -0,0 +1 @@$
++bonjour$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/user_output_test03	2025-08-12 18:25:04.086744811 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/test03.output	2025-08-10 18:12:36.324037284 +0300$
+@@ -1,2 +1 @@$
+-ourno$
+-Return value is false$
+\ No newline at end of file$
++o$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/user_output_test04	2025-08-12 18:25:04.095744828 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/test04.output	2025-08-10 18:12:36.325037303 +0300$
+@@ -0,0 +1 @@$
++jour$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/user_output_test05	2025-08-12 18:25:04.153744931 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/test05.output	2025-08-10 18:12:36.325037303 +0300$
+@@ -0,0 +1 @@$
++NULL$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/user_output_test08	2025-08-12 18:25:04.190744997 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strrchr/test08.output	2025-08-10 18:12:36.325037303 +0300$
+@@ -0,0 +1 @@$
++NULL$
+\ No newline at end of file$
+
+Diff KO :(
+
+= ft_strnstr.c =================================================================
+$> norminette ft_strnstr.c | grep -E '(Error|Warning)'
+ft_strnstr.c: Error!
+Error: NL_AFTER_PREPROC     (line:  14, col:   1):	Preprocessor statement must be followed by a newline
+Error: SPACE_AFTER_KW       (line:  16, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  16, col:   7):	[94mMissing space before parenthesis (brace/bracket)[0m
+Error: TOO_FEW_TAB          (line:  17, col:   1):	Missing tabs for indent level
+Error: VAR_DECL_START_FUNC  (line:  18, col:   1):	Variable declaration not at start of function
+Error: SPACE_AFTER_KW       (line:  23, col:   9):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  23, col:  15):	[94mMissing space before parenthesis (brace/bracket)[0m
+Error: SPACE_AFTER_KW       (line:  23, col:  17):	Missing space after keyword
+Error: SPACE_AFTER_KW       (line:  24, col:   5):	Missing space after keyword
+Error: SPC_BFR_PAR          (line:  24, col:  10):	[94mMissing space before parenthesis (brace/bracket)[0m
+Error: SPACE_AFTER_KW       (line:  31, col:  26):	Missing space after keyword
+Norme check failed
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strnstr.c main.c libft.a -o user_exe
+
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:37:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "lorem", 15)))
+                            ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:37:13: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "lorem", 15)))
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:44:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "ipsum", 15)))
+                            ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:44:13: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "ipsum", 15)))
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:51:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit lorem ipsum dolor", "ipsum", 35)))
+                            ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:51:13: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit lorem ipsum dolor", "ipsum", 35)))
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:58:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "", 10)))
+                            ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:58:13: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "", 10)))
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:65:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "ipsumm", 30)))
+                            ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:65:13: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "ipsumm", 30)))
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:72:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "dol", 30)))
+                            ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:72:13: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "dol", 30)))
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:79:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "consectetur", 30)))
+                            ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:79:13: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "consectetur", 30)))
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:86:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "sit", 10)))
+                            ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:86:13: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "sit", 10)))
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:93:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15)))
+                            ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:93:13: error: incompatible integer to pointer conversion assigning to 'const char *' from 'int' [-Werror,-Wint-conversion]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15)))
+                          ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strnstr/main.c:100:15: error: implicit declaration of function 'ft_strnstr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                if (!(str = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0)))
+                            ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+
+= ft_strncmp.c =================================================================
+$> norminette ft_strncmp.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strncmp.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strncmp/user_output_test02	2025-08-12 18:25:04.490745532 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strncmp/test02.output	2025-08-10 18:12:36.322037248 +0300$
+@@ -1 +1 @@$
+-0$
+\ No newline at end of file$
++-1$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strncmp/user_output_test03	2025-08-12 18:25:04.502745553 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strncmp/test03.output	2025-08-10 18:12:36.322037248 +0300$
+@@ -1 +1 @@$
+-0$
+\ No newline at end of file$
++1$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strncmp/user_output_test04	2025-08-12 18:25:04.513745573 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strncmp/test04.output	2025-08-10 18:12:36.322037248 +0300$
+@@ -1 +1 @@$
+-0$
+\ No newline at end of file$
++1$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./user_exe 09
+$> diff -U 3 user_output_test09 test09.output
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./user_exe 10
+$> diff -U 3 user_output_test10 test10.output
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./user_exe 11
+$> diff -U 3 user_output_test11 test11.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strncmp/user_output_test11	2025-08-12 18:25:04.599745726 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_strncmp/test11.output	2025-08-10 18:12:36.322037248 +0300$
+@@ -1 +1 @@$
+-0$
+\ No newline at end of file$
++1$
+\ No newline at end of file$
+
+Diff KO :(
+
+= ft_atoi.c ====================================================================
+$> norminette ft_atoi.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_atoi.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_atoi/user_output_test07	2025-08-12 18:25:04.855746183 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_atoi/test07.output	2025-08-10 18:12:36.310037029 +0300$
+@@ -1 +1 @@$
+--54$
+\ No newline at end of file$
++0$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 8 ===================================================
+$> ./user_exe 08
+$> diff -U 3 user_output_test08 test08.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_atoi/user_output_test08	2025-08-12 18:25:04.866746202 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_atoi/test08.output	2025-08-10 18:12:36.310037029 +0300$
+@@ -1 +1 @@$
+--48$
+\ No newline at end of file$
++0$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 9 ===================================================
+$> ./user_exe 09
+$> diff -U 3 user_output_test09 test09.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_atoi/user_output_test09	2025-08-12 18:25:04.878746224 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_atoi/test09.output	2025-08-10 18:12:36.310037029 +0300$
+@@ -1 +1 @@$
+-47$
+\ No newline at end of file$
++0$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 10 ==================================================
+$> ./user_exe 10
+$> diff -U 3 user_output_test10 test10.output
+--- /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_atoi/user_output_test10	2025-08-12 18:25:04.889746243 +0300$
++++ /home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_atoi/test10.output	2025-08-10 18:12:36.310037029 +0300$
+@@ -1 +1 @@$
+-47$
+\ No newline at end of file$
++0$
+\ No newline at end of file$
+
+Diff KO :(
+= Test 11 ==================================================
+$> ./user_exe 11
+$> diff -U 3 user_output_test11 test11.output
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./user_exe 12
+$> diff -U 3 user_output_test12 test12.output
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./user_exe 13
+$> diff -U 3 user_output_test13 test13.output
+
+Diff OK :D
+= Test 14 ==================================================
+$> ./user_exe 14
+$> diff -U 3 user_output_test14 test14.output
+
+Diff OK :D
+= Test 15 ==================================================
+$> ./user_exe 15
+$> diff -U 3 user_output_test15 test15.output
+
+Diff OK :D
+= Test 16 ==================================================
+$> ./user_exe 16
+$> diff -U 3 user_output_test16 test16.output
+
+Diff OK :D
+= Test 17 ==================================================
+$> ./user_exe 17
+$> diff -U 3 user_output_test17 test17.output
+
+Diff OK :D
+= Test 18 ==================================================
+$> ./user_exe 18
+$> diff -U 3 user_output_test18 test18.output
+
+Diff OK :D
+= Test 19 ==================================================
+$> ./user_exe 19
+$> diff -U 3 user_output_test19 test19.output
+
+Diff OK :D
+
+= ft_isalpha.c =================================================================
+$> norminette ft_isalpha.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isalpha.c main.c libft.a -o user_exe
+
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_isalpha/main.c:39:20: error: implicit declaration of function 'ft_isalpha' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                        ft_print_result(ft_isalpha(i));
+                                        ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_isalpha/main.c:48:20: error: implicit declaration of function 'ft_isalpha' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                        ft_print_result(ft_isalpha(i));
+                                        ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_isalpha/main.c:57:20: error: implicit declaration of function 'ft_isalpha' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                        ft_print_result(ft_isalpha(i));
+                                        ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_isalpha/main.c:66:20: error: implicit declaration of function 'ft_isalpha' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                        ft_print_result(ft_isalpha(i));
+                                        ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_isalpha/main.c:75:20: error: implicit declaration of function 'ft_isalpha' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                        ft_print_result(ft_isalpha(i));
+                                        ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_isalpha/main.c:84:20: error: implicit declaration of function 'ft_isalpha' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                        ft_print_result(ft_isalpha(i));
+                                        ^
+/home/talshoub/core/libft-war-machine/tests/Part1_functions/ft_isalpha/main.c:93:20: error: implicit declaration of function 'ft_isalpha' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+                        ft_print_result(ft_isalpha(i));
+                                        ^
+7 errors generated.
+
+= ft_isdigit.c =================================================================
+$> norminette ft_isdigit.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isdigit.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./user_exe 05
+$> diff -U 3 user_output_test05 test05.output
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./user_exe 06
+$> diff -U 3 user_output_test06 test06.output
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./user_exe 07
+$> diff -U 3 user_output_test07 test07.output
+
+Diff OK :D
+
+= ft_isalnum.c =================================================================
+$> norminette ft_isalnum.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isalnum.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
